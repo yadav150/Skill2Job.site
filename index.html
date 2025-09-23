@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skill2Job — Jobs in Assam & Northeast India | Latest Government Jobs</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="title" content="Skill2Job — Jobs in Assam & Northeast India | Latest Government Jobs">
+  <meta name="description" content="Skill2Job provides the latest Assam government jobs, exam results, admissions, and scholarship updates. Stay updated with reliable information for job seekers and students in Assam and Northeast India.">
+  <meta name="keywords" content="Assam government jobs, jobs in Northeast India, Assam exam results, Assam admissions, scholarships Assam, Skill2Job">
+  <meta name="author" content="Skill2Job.site">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skill2job.site/">
+  <meta property="og:title" content="Skill2Job — Jobs in Assam & Northeast India | Latest Government Jobs">
+  <meta property="og:description" content="Skill2Job provides the latest Assam government jobs, exam results, admissions, and scholarship updates. Stay updated with reliable information for job seekers and students in Assam and Northeast India.">
+  <meta property="og:image" content="https://skill2job.site/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://skill2job.site/">
+  <meta property="twitter:title" content="Skill2Job — Jobs in Assam & Northeast India | Latest Government Jobs">
+  <meta property="twitter:description" content="Skill2Job provides the latest Assam government jobs, exam results, admissions, and scholarship updates. Stay updated with reliable information for job seekers and students in Assam and Northeast India.">
+  <meta property="twitter:image" content="https://skill2job.site/og-image.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://skill2job.site/">
+
+  <style>
+    :root{
+      --brand:#004d40;
+      --bg:#ffffff;
+      --text:#002729;
+      --muted:#6b7280;
+      --content-width:98%;
+      --max-width:1400px;
+      --border-width:1px;
+      --radius:6px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+
+    header.site-header{
+      background:var(--bg);
+      border:var(--border-width) solid var(--brand);
+      border-radius:var(--radius);
+      margin:14px auto;
+      width:var(--content-width);
+      max-width:var(--max-width);
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 18px;
+    }
+    .brand{font-weight:700;color:var(--brand);font-size:30px}
+    
+    /* Header link tweak: clickable but looks like header */
+    .brand a {
+      text-decoration: none; /* remove underline */
+      color: inherit;         /* inherit brand color */
+    }
+
+    .search-wrap{display:flex;align-items:center;gap:8px}
+    .search-input{border:1px solid #ccc;padding:6px 8px;border-radius:4px;min-width:160px}
+    .search-btn{background:var(--brand);color:#fff;border:none;padding:7px 10px;border-radius:4px;cursor:pointer}
+
+    .container{
+      width:var(--content-width);
+      max-width:var(--max-width);
+      margin:14px auto;
+      padding:16px;
+      border:var(--border-width) solid var(--brand);
+      border-radius:var(--radius);
+      background:#fff;
+    }
+
+    .section-head{
+      background:var(--brand);
+      color:#fff;
+      padding:6px 10px;
+      font-weight:600;
+      border-radius:var(--radius) var(--radius) 0 0;
+      margin:-16px -16px 16px -16px;
+    }
+
+    .post-container{
+      max-height:none;
+    }
+
+    .post-item{
+      display:block;
+      padding:8px 0;
+      border-bottom:1px dashed #ddd;
+      text-decoration:none;
+      color:var(--text);
+    }
+    .post-item:last-child{border-bottom:none}
+
+    .pagination{
+      margin-top:12px;
+      text-align:center;
+    }
+    .pagination button{
+      background:var(--brand);
+      color:#fff;
+      border:none;
+      padding:6px 10px;
+      margin:0 3px;
+      border-radius:4px;
+      cursor:pointer;
+    }
+    .pagination button.active{background:#fff;color:var(--brand);border:1px solid var(--brand);}
+
+    footer{
+      width:var(--content-width);
+      max-width:var(--max-width);
+      margin:14px auto 28px;
+      padding:14px;
+      border:var(--border-width) solid var(--brand);
+      border-radius:var(--radius);
+      background:#fff;
+      text-align:center;
+      font-size:14px;
+      color:var(--muted);
+    }
+    footer a{color:var(--brand);margin:0 6px;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+
+    @media(max-width:600px){
+      header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
+      .search-input{width:100%}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+        <a href="https://www.skill2job.site/">Skill2Job.site</a>
+    </div>
+    <div class="search-wrap">
+      <input id="q" class="search-input" placeholder="Search titles..." />
+      <button id="searchBtn" class="search-btn">🔍</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Latest Posts -->
+    <div class="container">
+      <div class="section-head">Latest Posts</div>
+      <div class="post-container" id="postsList"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <!-- About Us -->
+    <div class="container">
+      <div class="section-head">About Us</div>
+      <p>Skill2Job.site publishes the latest Assam government jobs, exam results, admissions, and scholarship updates.  
+      Our aim is to help students and job seekers stay updated with reliable information in a clean and simple format.</p>
+    </div>
+
+    <!-- Our Online Tools -->
+    <div class="container">
+      <div class="section-head">Our Online Tools</div>
+      <a class="post-item" href="#"><strong>Online Image Combiner</strong><br><small>Combine multiple images easily online.</small></a>
+      <a class="post-item" href="#"><strong>Online PDF Compressor</strong><br><small>Compress your PDF files quickly without quality loss.</small></a>
+      <a class="post-item" href="#"><strong>Online Image Resizer</strong><br><small>Resize images online to custom dimensions.</small></a>
+      <a class="post-item" href="#"><strong>Online BG Remover</strong><br><small>Remove background from images automatically.</small></a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="yr"></span> Skill2Job.site — All Rights Reserved <br/>
+    <a href="#">About</a> | <a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Contact</a>
+  </footer>
+
+  <script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const POSTS = [
+    {title:"DME Assam Result 2025", href:"dme-assam-result-2025.html"},
+  ];
+
+  const postsPerPage = 10;
+  let currentPage = 1;
+
+  function renderPosts(page = 1, filter = '') {
+    const list = document.getElementById('postsList');
+    const pagination = document.getElementById('pagination');
+    list.innerHTML = '';
+
+    let filtered = POSTS.filter(p => p.title.toLowerCase().includes(filter.toLowerCase()));
+    const totalPages = Math.ceil(filtered.length / postsPerPage);
+    const start = (page - 1) * postsPerPage;
+    const end = start + postsPerPage;
+
+    filtered.slice(start, end).forEach(p => {
+      list.innerHTML += `<a class="post-item" href="${p.href}">${p.title}</a>`;
+    });
+
+    pagination.innerHTML = '';
+    for(let i = 1; i <= totalPages; i++){
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      btn.className = (i === page) ? 'active' : '';
+      btn.addEventListener('click', () => renderPosts(i, filter));
+      pagination.appendChild(btn);
+    }
+  }
+
+  document.getElementById('searchBtn').addEventListener('click', () => {
+    const q = document.getElementById('q').value.trim();
+    renderPosts(1, q);
+  });
+
+  renderPosts();
+  </script>
+
+</body>
+</html>
