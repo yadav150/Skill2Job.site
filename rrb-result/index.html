@@ -150,6 +150,8 @@
   border-radius: var(--radius);    /* rounded corners using variable */
   margin-top: 10px;                /* top margin */
   padding: 10px;                   /* spacing inside the box */
+  width: 100%;                     /* full width */
+  box-sizing: border-box;          /* include padding in width */
 }
 
 .faq-box p.justify-p b {
@@ -158,12 +160,16 @@
   border-radius: var(--radius);    /* rounded corners using variable */
   padding: 8px;                    /* spacing inside question */
   margin: 5px 0;                   /* spacing between question and answer */
+  width: 100%;                     /* full width */
+  box-sizing: border-box;          /* include padding in width */
 }
 
 .faq-box p.justify-p:not(:first-child) {
   background-color: transparent;   /* answer uses regular website background */
   margin: 5px 0;
   text-align: justify;
+  width: 100%;                     /* full width */
+  box-sizing: border-box;          /* include padding in width */
 }
   </style>
 </head>
