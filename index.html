@@ -134,7 +134,7 @@
       header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
       .search-input{width:100%}
       .ads-container {
-  border: none; /* remove this */
+  border: none; /* remove double border */
   border-radius: var(--radius);
   margin: 0 auto;
   padding: 8px;
@@ -142,6 +142,9 @@
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+
+  /* Reserve space to prevent jump */
+  min-height: 90px; /* adjust based on typical ad height */
 }
     .justify-p { text-align: justify; margin:8px 0; line-height:1.6; }
   </style>
@@ -162,7 +165,6 @@
   <div class="ads-container">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876390706944654"
        crossorigin="anonymous"></script>
-    <!-- Ads2 -->
     <ins class="adsbygoogle"
          style="display:block; width:100%; max-width:100%;"
          data-ad-client="ca-pub-1876390706944654"
