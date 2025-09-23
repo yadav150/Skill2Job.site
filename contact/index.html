@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — Skill2Job.site</title>
+  <meta name="description" content="Contact Skill2Job.site for business inquiries, general enquiries, or follow our WhatsApp channel. Get in touch with us today.">
+  <meta name="keywords" content="Skill2Job Contact, Business Inquiries, General Enquiries, WhatsApp Channel">
+  <meta name="robots" content="index, follow">
+  <style>
+    :root {
+      --brand: #004d40;
+      --bg: #ffffff;
+      --text: #002729;
+      --muted: #6b7280;
+      --content-width: 98%;
+      --max-width: 1100px;
+      --border-width: 1px;
+      --radius: 2px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; }
+
+    header.site-header {
+      background: var(--bg);
+      border: var(--border-width) solid var(--brand);
+      border-radius: var(--radius);
+      margin: 14px auto;
+      width: var(--content-width);
+      max-width: var(--max-width);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+    }
+    .brand { font-weight: 700; color: var(--brand); font-size: 30px; }
+    .brand a { text-decoration: none; color: inherit; }
+    .search-wrap { display: flex; align-items: center; gap: 8px; }
+    .search-input { border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px; min-width: 160px; }
+    .search-btn { background: var(--brand); color: #fff; border: none; padding: 7px 10px; border-radius: 4px; cursor: pointer; }
+
+    .container {
+      width: var(--content-width);
+      max-width: var(--max-width);
+      margin: 20px auto;
+      padding: 16px;
+      border: var(--border-width) solid var(--brand);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .section-head {
+      background: var(--brand);
+      color: #fff;
+      padding: 8px 12px;
+      font-weight: 600;
+      border-radius: var(--radius) var(--radius) 0 0;
+      margin: -16px -16px 16px -16px;
+      font-size: 18px;
+    }
+
+    .justify-p { text-align: justify; margin: 8px 0; line-height: 1.6; }
+    ul { list-style-type: disc; padding-left: 20px; margin: 8px 0; }
+    ul li { margin: 6px 0; line-height: 1.6; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .tool-item {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px dashed #ddd;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .tool-item:last-child { border-bottom: none; }
+    .tool-item small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+    footer {
+      width: var(--content-width);
+      max-width: var(--max-width);
+      margin: 14px auto 28px;
+      padding: 14px;
+      border: var(--border-width) solid var(--brand);
+      border-radius: var(--radius);
+      background: #fff;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer a { color: var(--brand); margin: 0 6px; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media(max-width:600px){
+      header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
+      .search-input{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+        <a href="https://www.skill2job.site/">Skill2Job.site</a>
+    </div>
+    <div class="search-wrap">
+      <input id="q" class="search-input" placeholder="Search titles..." />
+      <button id="searchBtn" class="search-btn">🔍</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Us Container -->
+    <div class="container">
+      <div class="section-head">Contact Us</div>
+      <p class="justify-p">
+        For any business inquiries, general enquiries, or to follow our WhatsApp channel, reach out to us using the details below.
+      </p>
+      <ul class="justify-p">
+        <li><b>Business Inquiries:</b> <a href="mailto:skill2job@gmail.com">skill2job@gmail.com</a></li>
+        <li><b>General Enquiries:</b> <a href="mailto:yadavsubba2003@gmail.com">yadavsubba2003@gmail.com</a></li>
+        <li><b>Follow our WhatsApp Channel:</b> <a href="https://whatsapp.com/channel/0029Vb1sPWRCBtxA5KiCPr3e" target="_blank">Click Here</a></li>
+      </ul>
+      <p class="justify-p">
+        We aim to respond promptly and provide you with the information or assistance you need. Stay connected with Skill2Job for updates, announcements, and the latest job opportunities.
+      </p>
+    </div>
+
+    <!-- Tools Section -->
+    <div class="container">
+      <div class="section-head">Our Online Tools</div>
+      <a class="tool-item" href="#"><strong>Online Image Combiner</strong><small>Combine multiple images easily online.</small></a>
+      <a class="tool-item" href="#"><strong>Online PDF Compressor</strong><small>Compress your PDF files quickly without quality loss.</small></a>
+      <a class="tool-item" href="#"><strong>Online Image Resizer</strong><small>Resize images online to custom dimensions.</small></a>
+      <a class="tool-item" href="#"><strong>Online Background Remover</strong><small>Remove background from images automatically.</small></a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="yr2"></span> Skill2Job.site — All Rights Reserved <br/>
+    <a href="about/">About</a> | <a href="terms/">Terms</a> | <a href="privacy/">Privacy</a> | <a href="contact/">Contact</a>
+  </footer>
+
+  <script>
+    // Year auto-update
+    document.getElementById('yr2').textContent = new Date().getFullYear();
+
+    // Simple search redirect
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      const q = document.getElementById('q').value.trim();
+      location.href = q ? "index.html?q=" + encodeURIComponent(q) : "index.html";
+    });
+  </script>
+</body>
+</html>
