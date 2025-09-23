@@ -135,15 +135,14 @@
       .search-input{width:100%}
     }
     .ads-container {
-  border: var(--border-width) solid #ccc; /* soft grey */
+  border: var(--border-width) solid #ccc; /* soft grey border */
   border-radius: var(--radius);
-  margin: 14px auto;
+  margin: 0 auto; /* center inside container */
   padding: 8px;
-  background: #f9f9f9; /* subtle light background */
-  width: var(--content-width);
-  max-width: var(--max-width);
+  background: #f9f9f9;
+  width: 96%;  /* only 96% of parent container */
   text-align: center;
-      }
+}
     .justify-p { text-align: justify; margin:8px 0; line-height:1.6; }
   </style>
 </head>
@@ -159,19 +158,21 @@
     </div>
   </header>
 <!-- Google AdSense Horizontal Ad Below Header -->
-<div class="container ads-container">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876390706944654"
-     crossorigin="anonymous"></script>
-<!-- Ads2 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1876390706944654"
-     data-ad-slot="2353772262"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<div class="container">
+  <div class="ads-container">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876390706944654"
+       crossorigin="anonymous"></script>
+    <!-- Ads2 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1876390706944654"
+         data-ad-slot="2353772262"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
 </div>
   <main>
     <!-- Latest Posts -->
