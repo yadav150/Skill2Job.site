@@ -134,14 +134,21 @@
       header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
       .search-input{width:100%}
       .ads-container {
-  border: none;
-  border-radius: var(--radius);
-  margin: 0 auto;
-  padding: 8px;
-  background: #f9f9f9;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
+    border: var(--border-width) solid #ccc; /* soft grey */
+    border-radius: var(--radius);
+    margin: 14px auto;
+    padding: 8px;
+    background: #f9f9f9; /* subtle light background */
+    width: var(--content-width);
+    max-width: var(--max-width);
+    text-align: center;
+    overflow: hidden; /* ensures ad never overflows */
+}
+
+.ads-container ins.adsbygoogle {
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-block !important;
 }
     .justify-p { text-align: justify; margin:8px 0; line-height:1.6; }
   </style>
@@ -158,20 +165,18 @@
     </div>
   </header>
 <!-- Google AdSense Horizontal Ad Below Header -->
-<div class="container">
-  <div class="ads-container">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876390706944654"
-       crossorigin="anonymous"></script>
-    <!-- Ads2 -->
-    <ins class="adsbygoogle"
-         style="display:block; width:100%; max-width:100%;"
-         data-ad-client="ca-pub-1876390706944654"
-         data-ad-slot="2353772262"
-         data-ad-format="auto"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
+<div class="container ads-container">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876390706944654"
+     crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-1876390706944654"
+       data-ad-slot="1907598440"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </div>
   <main>
     <!-- Latest Posts -->
