@@ -134,21 +134,26 @@
       header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
       .search-input{width:100%}
       .ads-container {
-    border: var(--border-width) solid #ccc; /* soft grey */
+    border: var(--border-width) solid #ccc;
     border-radius: var(--radius);
     margin: 14px auto;
     padding: 8px;
-    background: #f9f9f9; /* subtle light background */
+    background: #f9f9f9;
     width: var(--content-width);
     max-width: var(--max-width);
     text-align: center;
-    overflow: hidden; /* ensures ad never overflows */
+    overflow: hidden;
+
+    /* NEW: allow container to expand on mobile */
+    min-width: 300px;       /* AdSense minimum width */
+    box-sizing: border-box;
 }
 
 .ads-container ins.adsbygoogle {
-    max-width: 100%;
+    width: 100% !important;  /* make ad fill container width */
+    max-width: 100%;         /* never exceed container */
+    display: block !important;
     box-sizing: border-box;
-    display: inline-block !important;
 }
     .justify-p { text-align: justify; margin:8px 0; line-height:1.6; }
   </style>
