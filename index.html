@@ -134,8 +134,24 @@
       header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
       .search-input{width:100%}
       <style>
-.ads-container{border:var(--border-width) solid #ccc;border-radius:var(--radius);margin:14px auto;padding:0;background:#f9f9f9;width:var(--content-width);max-width:var(--max-width);text-align:center;overflow:hidden;min-height:250px;box-sizing:border-box}
-.ads-container ins.adsbygoogle{width:100% !important;max-width:100%;display:block !important;box-sizing:border-box;height:100% !important}
+.ads-container {
+  width: var(--content-width);
+  max-width: var(--max-width);
+  min-height: 280px;  /* reserve ad height */
+  border: var(--border-width) solid #ccc;
+  border-radius: var(--radius);
+  margin: 14px auto;
+  padding: 0;
+  background: #f9f9f9;
+  text-align: center;
+  box-sizing: border-box;
+}
+.ads-container ins.adsbygoogle {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;  /* fill reserved space */
+  max-width: 100%;
+}
 </style>
 </head>
 <body>
