@@ -158,27 +158,30 @@ Skill2Job.site also serves as a comprehensive resource for those looking to enha
     const end = start + postsPerPage;
 
     // Display posts without bold
-filtered.slice(start, end).forEach(p => {
-  list.innerHTML += `<a class="post-item" href="${p.href}">${p.title}</a>`;
-});
+    filtered.slice(start, end).forEach(p => {
+      list.innerHTML += `<a class="post-item" href="${p.href}">${p.title}</a>`;
+    });
 
-// Pagination buttons
-pagination.innerHTML = '';
-for(let i = 1; i <= totalPages; i++){
-  const btn = document.createElement('button');
-  btn.textContent = i;
-  btn.className = (i === page) ? 'active' : '';
-  btn.addEventListener('click', () => renderPosts(i, filter));
-  pagination.appendChild(btn);
-}
+    // Pagination buttons
+    pagination.innerHTML = '';
+    for(let i = 1; i <= totalPages; i++){
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      btn.className = (i === page) ? 'active' : '';
+      btn.addEventListener('click', () => renderPosts(i, filter));
+      pagination.appendChild(btn);
+    }
+  }
 
+  // Search functionality
   document.getElementById('searchBtn').addEventListener('click', () => {
     const q = document.getElementById('q').value.trim();
     renderPosts(1, q);
   });
 
+  // Initial render
   renderPosts();
-  </script>
+</script>
   <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
   <img src="whatsapp.png" alt="Chat on WhatsApp">
 </a>
