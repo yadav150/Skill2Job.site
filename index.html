@@ -263,19 +263,37 @@ Skill2Job.site also serves as a comprehensive resource for those looking to enha
     const start = (page - 1) * postsPerPage;
     const end = start + postsPerPage;
 
-    filtered.slice(start, end).forEach(p => {
-      list.innerHTML += `<a class="post-item" href="${p.href}">${p.title}</a>`;
-    });
+    // Clear previous content
+list.innerHTML = '';
+pagination.innerHTML = '';
 
-    pagination.innerHTML = '';
-    for(let i = 1; i <= totalPages; i++){
-      const btn = document.createElement('button');
-      btn.textContent = i;
-      btn.className = (i === page) ? 'active' : '';
-      btn.addEventListener('click', () => renderPosts(i, filter));
-      pagination.appendChild(btn);
-    }
-  }
+// Render posts efficiently
+const fragment = document.createDocumentFragment();
+// Clear previous content
+list.innerHTML = '';
+pagination.innerHTML = '';
+
+// Render posts efficiently
+const fragment = document.createDocumentFragment();
+filtered.slice(start, end).forEach(p => {
+    const a = document.createElement('a');
+    a.className = 'post-item';
+    a.href = p.href;
+    a.textContent = `• ${p.title}`;  // Add bullet automatically
+    fragment.appendChild(a);
+});
+list.appendChild(fragment);
+
+// Render pagination buttons efficiently
+const btnFragment = document.createDocumentFragment();
+for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement('button');
+    btn.textContent = i;
+    btn.className = (i === page) ? 'active' : '';
+    btn.addEventListener('click', () => renderPosts(i, filter));
+    btnFragment.appendChild(btn);
+}
+pagination.appendChild(btnFragment);
 
   document.getElementById('searchBtn').addEventListener('click', () => {
     const q = document.getElementById('q').value.trim();
