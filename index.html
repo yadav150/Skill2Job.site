@@ -281,7 +281,8 @@ filtered.slice(start, end).forEach(p => {
     a.href = p.href;
     a.textContent = `• ${p.title}`;  // Add bullet automatically
     fragment.appendChild(a);
-});
+}
+    }
 list.appendChild(fragment);
 
 // Render pagination buttons efficiently
