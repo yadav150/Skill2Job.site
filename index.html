@@ -136,8 +136,8 @@ Skill2Job.site also serves as a comprehensive resource for those looking to enha
     © <span id="yr"></span> Skill2Job.site — All Rights Reserved <br/>
     <a href="about/">About</a> | <a href="terms/">Terms</a> | <a href="privacy/">Privacy</a> | <a href="contact/">Contact</a>
   </footer>
-
   <script>
+document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('yr').textContent = new Date().getFullYear();
 
   const POSTS = [
@@ -156,7 +156,7 @@ Skill2Job.site also serves as a comprehensive resource for those looking to enha
     {title:"• RRB NTPC Result 2025 – Check Your NTPC (Graduate Level) Exam Scorecard", href:"rrb-result/"},
   ];
 
-  const postsPerPage = 20;
+  const postsPerPage = 10;
   let currentPage = 1;
 
   function renderPosts(page = 1, filter = '') {
@@ -169,12 +169,10 @@ Skill2Job.site also serves as a comprehensive resource for those looking to enha
     const start = (page - 1) * postsPerPage;
     const end = start + postsPerPage;
 
-    // Display posts without bold
     filtered.slice(start, end).forEach(p => {
       list.innerHTML += `<a class="post-item" href="${p.href}">${p.title}</a>`;
     });
 
-    // Pagination buttons
     pagination.innerHTML = '';
     for(let i = 1; i <= totalPages; i++){
       const btn = document.createElement('button');
@@ -185,14 +183,13 @@ Skill2Job.site also serves as a comprehensive resource for those looking to enha
     }
   }
 
-  // Search functionality
   document.getElementById('searchBtn').addEventListener('click', () => {
     const q = document.getElementById('q').value.trim();
     renderPosts(1, q);
   });
 
-  // Initial render
   renderPosts();
+});
 </script>
 </body>
 </html>
