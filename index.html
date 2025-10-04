@@ -6,8 +6,143 @@
 
   <title>Skill2Job — Jobs in Assam & Northeast India | Latest Government Jobs</title>
 
-  <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="https://skill2job.site/favicon.png" type="image/png">
+
+  <!-- Critical CSS Inline -->
+  <style>
+    :root {
+      --brand: #004d40;
+      --bg: #ffffff;
+      --text: #002729;
+      --muted: #6b7280;
+      --content-width: 99%;
+      --max-width: 1400px;
+      --border-width: 1px;
+      --radius: 1px;
+      --post-border: #ddd;
+      --ads-bg: #f9f9f9;
+    }
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header.site-header {
+      background: var(--bg);
+      border: var(--border-width) solid var(--brand);
+      border-radius: var(--radius);
+      margin: 14px auto;
+      width: var(--content-width);
+      max-width: var(--max-width);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+    }
+    a { color: #004d40; text-decoration: none; }
+    a:hover { color: #006644; }
+    .brand {
+      font-weight: 700;
+      color: var(--brand);
+      font-size: 30px;
+      text-decoration: none;
+    }
+    .search-wrap { display: flex; align-items: center; gap: 8px; }
+    .search-input {
+      border: var(--border-width) solid var(--post-border);
+      padding: 6px 8px;
+      border-radius: var(--radius);
+      min-width: 160px;
+    }
+    .search-btn {
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      padding: 7px 10px;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .container {
+      width: var(--content-width);
+      max-width: var(--max-width);
+      margin: 14px auto;
+      padding: 15px;
+      border: var(--border-width) solid var(--brand);
+      border-radius: var(--radius);
+      background: var(--bg);
+    }
+    .section-head {
+      background: var(--brand);
+      color: var(--bg);
+      padding: 6px 10px;
+      font-weight: 800;
+      border-radius: var(--radius) var(--radius) 0 0;
+      margin: -16px -16px 16px -16px;
+      font-size: 17px;
+    }
+    h1, h2 {
+      background: var(--brand);
+      color: var(--bg);
+      padding: 6px 10px;
+      font-weight: 500;
+      border-radius: var(--radius) var(--radius) 0 0;
+      margin: -16px -16px 16px -16px;
+      font-size: 17px;
+    }
+    h3 { font-size: 16px; }
+    .post-container { max-height: none; }
+    .post-item {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--post-border);
+      text-decoration: none;
+      color: var(--text);
+    }
+    .post-item:last-child { border-bottom: none; }
+    .pagination {
+      margin-top: 12px;
+      text-align: center;
+    }
+    .pagination button {
+      background: var(--brand);
+      color: var(--bg);
+      border: none;
+      padding: 6px 10px;
+      margin: 0 3px;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .pagination button.active {
+      background: var(--bg);
+      color: var(--brand);
+      border: 1px solid var(--brand);
+    }
+    footer {
+      width: var(--content-width);
+      max-width: var(--max-width);
+      margin: 14px auto 28px;
+      padding: 14px;
+      border: var(--border-width) solid var(--brand);
+      border-radius: var(--radius);
+      background: var(--bg);
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--brand);
+      margin: 0 6px;
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+
+  <!-- Load Remaining CSS -->
+  <link rel="stylesheet" href="/style.css">
 
   <!-- Preconnect for Ads -->
   <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
