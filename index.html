@@ -28,49 +28,52 @@
   <meta name="twitter:title" content="Skill2Job – Latest Government Jobs in Assam">
   <meta name="twitter:description" content="Skill2Job.site provides daily updates on Assam & Northeast India government jobs, latest job notifications, exam results, admissions, and scholarships. Stay informed with authentic Assam recruitment news and career updates for students and job seekers.">
   <meta name="twitter:image" content="https://skill2job.site/favicon.png">
-
-  <!-- Structured Data / JSON-LD for Google -->
-  <!-- Structured Data / JSON-LD for Skill2Job Homepage -->
+<!-- Structured Data / JSON-LD for Skill2Job Homepage with Breadcrumbs (Fixed) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Skill2Job",
-  "url": "https://skill2job.site/",
-  "description": "Skill2Job is a central hub for Assam and Northeast India, providing updates on government exams like SSC, APSC, RRB, RBI, ISRO, technical and education notifications, tools, tutorials, admit cards, exam routines, results, syllabus, and the latest job updates for students.",
-  "image": "https://skill2job.site/favicon.png",
-  "author": {
-    "@type": "Person",
-    "name": "Yadav Subba",
-    "birthPlace": {
-      "@type": "Place",
-      "name": "Dikhlem Nepali Subba Gaon, West Karbi Anglong, Assam, India"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Skill2Job",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://skill2job.site/favicon.png"
-    }
-  },
-  "datePublished": "2024-12-01",
-  "dateModified": "2025-10-11",
-  "interactionStatistic": [
+  "@graph": [
     {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/LoginAction",
-      "userInteractionCount": 0,
-      "name": "No login required, free access for all users"
-    }
-  ],
-  "mainEntity": [
+      "@type": "WebSite",
+      "@id": "https://skill2job.site/#website",
+      "name": "Skill2Job",
+      "url": "https://skill2job.site/",
+      "description": "Skill2Job is a central hub for Assam and Northeast India, providing updates on government exams like SSC, APSC, RRB, RBI, ISRO, technical and education notifications, tools, tutorials, admit cards, exam routines, results, syllabus, and the latest job updates for students.",
+      "image": "https://skill2job.site/favicon.png",
+      "author": {
+        "@type": "Person",
+        "name": "Yadav Subba",
+        "birthPlace": {
+          "@type": "Place",
+          "name": "Dikhlem Nepali Subba Gaon, West Karbi Anglong, Assam, India"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skill2Job",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://skill2job.site/favicon.png"
+        }
+      },
+      "datePublished": "2024-12-01",
+      "dateModified": "2025-10-11",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/LoginAction",
+          "userInteractionCount": 0,
+          "name": "No login required, free access for all users"
+        }
+      ]
+    },
     {
       "@type": "FAQPage",
+      "@id": "https://skill2job.site/#faq",
       "mainEntity": [
         {
           "@type": "Question",
+          "@id": "https://skill2job.site/#faq1",
           "name": "Who is the founder of Skill2Job?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -79,6 +82,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://skill2job.site/#faq2",
           "name": "When was Skill2Job started?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -87,6 +91,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://skill2job.site/#faq3",
           "name": "Is Skill2Job free to use?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -95,6 +100,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://skill2job.site/#faq4",
           "name": "Does Skill2Job have login trauma or frustration?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -103,6 +109,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://skill2job.site/#faq5",
           "name": "Are there too many ads on Skill2Job?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -111,6 +118,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://skill2job.site/#faq6",
           "name": "Does Skill2Job provide tools pages?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -119,11 +127,39 @@
         },
         {
           "@type": "Question",
+          "@id": "https://skill2job.site/#faq7",
           "name": "What tools are offered on Skill2Job?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Skill2Job provides simple and easy-to-use tools such as Image Resizer, Image Background Color Editor, Photo & Signature Joiner, Age Calculator, and other handy utilities."
           }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skill2job.site/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "@id": "https://skill2job.site/#breadcrumb1",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skill2job.site/"
+        },
+        {
+          "@type": "ListItem",
+          "@id": "https://skill2job.site/#breadcrumb2",
+          "position": 2,
+          "name": "Government Jobs",
+          "item": "https://skill2job.site/government-jobs/"
+        },
+        {
+          "@type": "ListItem",
+          "@id": "https://skill2job.site/#breadcrumb3",
+          "position": 3,
+          "name": "SSC Jobs",
+          "item": "https://skill2job.site/ssc-jobs/"
         }
       ]
     }
