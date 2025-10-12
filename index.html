@@ -250,6 +250,21 @@ footer{width:var(--content-width);max-width:var(--max-width);margin:14px auto 28
 
 /* Table nowrap */
 .table-nowrap{width:100%;max-width:100%;border-collapse:collapse;table-layout:auto;white-space:nowrap;overflow-x:auto;display:table;-webkit-overflow-scrolling:touch}@media(max-width:768px){.table-nowrap{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}table.table-nowrap th,table.table-nowrap td{border:var(--border-width) solid var(--brand);padding:8px 12px;text-align:left;min-width:160px;box-sizing:border-box;white-space:nowrap}table.table-nowrap th{background-color:#dcdcdc;font-weight:600;border-radius:var(--radius)}
+
+    /* visitor-counter.css */
+.visitor-counter {
+    margin-top:5px;
+  color: var(--text);
+  background-color: var(--ads-bg);
+  display: inline-block;
+  text-align:center;
+}
+
+.visitor-counter #visitor-count {
+  font-weight: bold;
+  color: var(--brand);
+}
+    
   </style>
 <body>
 
@@ -343,6 +358,9 @@ footer{width:var(--content-width);max-width:var(--max-width);margin:14px auto 28
   <footer>
     © <span id="yr"></span> Skill2Job.site — All Rights Reserved <br/>
     <a href="https://www.skill2job.site/about/">About</a> | <a href="https://www.skill2job.site/terms/">Terms</a> | <a href="https://www.skill2job.site/privacy/">Privacy</a> | <a href="https://www.skill2job.site/contact/">Contact</a>
+    <br><div class="visitor-counter">
+    Visitors: <span id="visitor-count">0</span>
+    </div>
   </footer>
 
   <script>
@@ -452,6 +470,9 @@ footer{width:var(--content-width);max-width:var(--max-width);margin:14px auto 28
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K25V8NP6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- External JS -->
+<script src="count-script.js" defer></script>
   
 </body>
 </html>
