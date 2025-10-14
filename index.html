@@ -462,6 +462,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js" defer></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js" defer></script>
 <script src="visitor-counter.js" defer></script>
+
+  <!-- Web Vitals Library -->
+<script src="https://unpkg.com/web-vitals@3.3.0/dist/web-vitals.iife.js"></script>
+
+<script>
+  // Log metrics to the console
+  webVitals.getLCP(console.log);  // Largest Contentful Paint
+  webVitals.getFID(console.log);  // First Input Delay
+  webVitals.getCLS(console.log);  // Cumulative Layout Shift
+</script>
   
 </body>
 </html>
