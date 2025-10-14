@@ -1,2 +1,7 @@
+title: "Skill2Job"
+description: "Latest Government Jobs in Assam"
+baseurl: ""
+url: "https://skill2job.site"
+
 plugins:
   - jekyll-sitemap
