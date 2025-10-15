@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <Link rel="stylesheet" href="/style.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About Us — Skill2Job.site | Jobs, Exams & Scholarships in Assam</title>
   <!-- SEO Meta Tags -->
   <meta name="description" content="Learn more about Skill2Job.site, a dedicated platform providing reliable updates on Assam government jobs, competitive exams, admissions, and scholarships.">
   <meta name="keywords" content="About Skill2Job, Assam jobs, Exam updates, Scholarship info, Career guidance">
+  <meta name="author" content="Yadav Subba">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / Social Media Preview -->
@@ -27,15 +27,28 @@
   <link rel="canonical" href="https://skill2job.site/about/">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://skill2job.site/favicon.png">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T02BWC859Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Critical CSS -->
+<style>
+:root{--brand:#004d40;--bg:#fff;--text:#002729;--muted:#6b7280;--content-width:98%;--max-width:1400px;--border-width:1px;--radius:4px;--post-border:#ddd;--ads-bg:#f9f9f9}
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-display:swap}
+header.site-header{background:var(--bg);border:var(--border-width) solid var(--brand);border-radius:var(--radius);margin:14px auto;width:var(--content-width);max-width:var(--max-width);display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+a{color:var(--brand);text-decoration:none}
+a:hover{color:#006644}
+.brand{font-weight:700;color:var(--brand);font-size:30px;text-decoration:none}
+.search-wrap{display:flex;align-items:center;gap:8px}
+.search-input{border:var(--border-width) solid var(--post-border);padding:6px 8px;border-radius:var(--radius);min-width:160px}
+.search-btn{background:var(--brand);color:#fff;border:none;padding:7px 10px;border-radius:var(--radius);cursor:pointer}
+@media(max-width:600px){
+header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
+.search-input{width:100%}
+}
+</style>
 
-  gtag('config', 'G-T02BWC859Z');
-</script>
+<!-- Non-Critical CSS (load async) -->
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <header class="site-header">
@@ -111,17 +124,17 @@
     <a href="https://www.skill2job.site/about/">About</a> | <a href="https://www.skill2job.site/terms/">Terms</a> | <a href="https://www.skill2job.site/privacy/">Privacy</a> | <a href="https://www.skill2job.site/contact/">Contact</a>
   </footer>
 
-  <script>
-    // Year auto-update
-    document.getElementById('yr2').textContent = new Date().getFullYear();
-
-    // Simple search redirect
-    document.getElementById('searchBtn').addEventListener('click', () => {
-      const q = document.getElementById('q').value.trim();
-      location.href = q ? "index.html?q=" + encodeURIComponent(q) : "index.html";
-    });
-  </script>
+  <script src="year.js" defer></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876390706944654"
         crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5X1VJQS79"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S5X1VJQS79');
+</script>
 </body>
 </html>
