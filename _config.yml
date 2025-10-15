@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-sitemap
+
+# Optional: base url
+url: "https://www.skill2job.site"
