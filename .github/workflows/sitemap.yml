@@ -1,0 +1,27 @@
+name: Auto Generate Sitemap
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install sitemap generator
+        run: npm install -g sitemap-generator-cli
+
+      - name: Generate sitemap
+        run: sitemap-generator https://www.skill2job.site --output ./sitemap.xml --strip-querystring
+
+      - name: Commit sitemap
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add sitemap.xml
+          git commit -m "Auto update sitemap"
+          git push
