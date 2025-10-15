@@ -12,6 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
       - name: Install sitemap generator
         run: npm install -g sitemap-generator-cli
 
@@ -23,5 +28,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add sitemap.xml
-          git commit -m "Auto update sitemap"
+          git diff --cached --quiet || git commit -m "Auto update sitemap"
           git push
