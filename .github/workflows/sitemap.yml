@@ -32,7 +32,8 @@ jobs:
       # 5️⃣ Generate styled HTML sitemap
       - name: Generate sitemap.html
         run: |
-          echo "<!DOCTYPE html>
+          cat <<EOT > sitemap.html
+<!DOCTYPE html>
 <html lang='en'>
 <head>
 <meta charset='UTF-8'>
@@ -51,7 +52,8 @@ a:hover { text-decoration:underline; }
 </head>
 <body>
 <h1>Website Sitemap</h1>
-<ul>" > sitemap.html
+<ul>
+EOT
 
           for folder in */; do
             if [ -f "$folder/index.html" ]; then
