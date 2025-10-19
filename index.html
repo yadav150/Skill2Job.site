@@ -77,26 +77,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N3FRF2G6');</script>
 <!-- End Google Tag Manager -->
-<!-- Critical CSS -->
+<!-- ⚡ Critical CSS (keep minimal) -->
 <style>
-:root{--brand:#004d40;--bg:#fff;--text:#002729;--muted:#6b7280;--content-width:98%;--max-width:1400px;--border-width:1px;--radius:4px;--post-border:#ddd;--ads-bg:#f9f9f9}
+:root{--brand:#0078d7;--bg:#fff;--text:#222;--muted:#555;--border-width:1px;--radius:6px;--content-width:95%;--max-width:1100px;--post-border:#ccc}
 html{scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-display:swap}
+body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;font-display:swap}
 header.site-header{background:var(--bg);border:var(--border-width) solid var(--brand);border-radius:var(--radius);margin:14px auto;width:var(--content-width);max-width:var(--max-width);display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
 a{color:var(--brand);text-decoration:none}
 a:hover{color:#006644}
-.brand{font-weight:700;color:var(--brand);font-size:30px;text-decoration:none}
+.brand{font-weight:700;color:var(--brand);font-size:28px;text-decoration:none}
 .search-wrap{display:flex;align-items:center;gap:8px}
 .search-input{border:var(--border-width) solid var(--post-border);padding:6px 8px;border-radius:var(--radius);min-width:160px}
 .search-btn{background:var(--brand);color:#fff;border:none;padding:7px 10px;border-radius:var(--radius);cursor:pointer}
-@media(max-width:600px){
-header.site-header{flex-direction:column;align-items:flex-start;gap:8px}
-.search-input{width:100%}
-}
+@media(max-width:600px){header.site-header{flex-direction:column;align-items:flex-start;gap:8px}.search-input{width:100%}}
 </style>
-<!-- Non-Critical CSS (load async) -->
-<link rel="stylesheet" href="style.css">
+
+<!-- ⚡ Non-Critical CSS (async load) -->
+<link rel="preload" href="style.css" as="style">
+<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
