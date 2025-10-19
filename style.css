@@ -1,38 +1,303 @@
-.container{width:var(--content-width);max-width:var(--max-width);margin:14px auto;padding:15px;border:var(--border-width) solid var(--brand);border-radius:var(--radius);background:var(--bg)}
-.section-head{background:var(--brand);color:var(--bg);padding:6px 10px;font-weight:800;border-radius:var(--radius)var(--radius) 0 0;margin:-16px -16px 16px -16px;font-size:17px}
-h1,h2{background:var(--brand);color:var(--bg);padding:6px 10px;font-weight:500;border-radius:var(--radius)var(--radius) 0 0;margin:-16px -16px 16px -16px;font-size:17px}
-h1{text-align:center}
-h2{margin-top:20px}
-h3{font-size:15px}
-.post-container{max-height:none}
-.post-item{display:block;padding:8px 0;border-bottom:1px dashed var(--post-border);text-decoration:none;color:var(--text);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.post-item:last-child{border-bottom:none}
-.post-item::before{content:"• ";color:var(--brand);font-weight:500;margin-right:6px}
-.tool-item{display:block;padding:10px 0;border-bottom:1px dashed var(--post-border);text-decoration:none;color:var(--text);font-size:14px;white-space:normal;overflow:visible;text-overflow:clip}
-.tool-item:last-child{border-bottom:none}
-.tool-item .tool-title{display:block;margin-bottom:4px;color:var(--text);font-size:14px}
-.tool-item small{display:block;color:#555;font-size:14px;line-height:1.4;margin-top:0}
-.justify-p{text-align:justify;margin:8px 0;line-height:1.6;font-size:14px}
-.pagination{margin-top:12px;text-align:center;display:flex;gap:6px;flex-wrap:wrap;justify-content:center;align-items:center;padding:6px 0}
-.pagination button{background:var(--bg);color:var(--brand);border:1px solid var(--brand);padding:6px 10px;border-radius:4px;cursor:pointer}
-.pagination button.active{background:var(--brand);color:var(--bg)}
-.pagination button:disabled{opacity:.5;cursor:not-allowed}
-@media(max-width:600px){
-.post-item{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tool-item{white-space:normal}
-.pagination{gap:4px;padding:8px 0}
+/* ==========================
+   🔹 Global Variables
+   ========================== */
+:root {
+  --brand: #0078d7;
+  --bg: #ffffff;
+  --text: #222;
+  --muted: #555;
+  --border-width: 1px;
+  --radius: 6px;
+  --content-width: 95%;
+  --max-width: 1100px;
+  --post-border: #ccc;
 }
-.follow-us .social-btns{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-bottom:8px}
-.follow-us .btn{width:150px;text-align:center;padding:10px 12px;border-radius:var(--radius);color:var(--text);font-weight:500;text-decoration:none;background:var(--bg);border-top:var(--border-width) solid var(--brand);border-left:var(--border-width) solid var(--brand);border-bottom:3px solid #000;border-right:3px solid #000;position:relative;overflow:hidden;transition:all .3s ease;box-shadow:1px 1px 2px rgba(0,0,0,.1),-.5px -.5px 1px rgba(255,255,255,.05)}
-.follow-us .btn.whatsapp,.follow-us .btn.facebook{border-color:var(--brand) var(--brand)}
-.follow-us .btn.whatsapp:hover{background:#25D366;color:#fff}
-.follow-us .btn.facebook:hover{background:#1877F2;color:#fff}
-@media(max-width:600px){.follow-us .social-btns{gap:12px}}
-footer{width:var(--content-width);max-width:var(--max-width);margin:14px auto 28px;padding:14px;border:var(--border-width) solid var(--brand);border-radius:var(--radius);background:var(--bg);text-align:center;font-size:13.5px;color:var(--muted)}
-.uni-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
-.uni-table td,.uni-table th{border:1px solid #1a1a1a;padding:8px 12px;text-align:left}
-.uni-table th{background:#f2f2f2;font-weight:600}
-.table-nowrap{width:100%;max-width:100%;border-collapse:collapse;table-layout:auto;white-space:nowrap;overflow-x:auto;display:table;-webkit-overflow-scrolling:touch;font-size:14px}
-@media(max-width:768px){.table-nowrap{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}
-table.table-nowrap th,table.table-nowrap td{border:var(--border-width) solid var(--brand);padding:8px 12px;text-align:left;min-width:160px;box-sizing:border-box;white-space:nowrap}
-table.table-nowrap th{background-color:#dcdcdc;font-weight:600;border-radius:var(--radius)}
+
+/* ==========================
+   🔹 General Structure
+   ========================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-display: swap;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================
+   🔹 Container & Sections
+   ========================== */
+.container,
+footer,
+.section-head {
+  border: var(--border-width) solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--bg);
+  width: var(--content-width);
+  max-width: var(--max-width);
+  margin: 14px auto;
+  padding: 15px;
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+}
+
+.section-head,
+h1,
+h2 {
+  background: var(--brand);
+  color: var(--bg);
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+/* ==========================
+   🔹 Post and Tool Lists
+   ========================== */
+.post-container {
+  max-height: none;
+}
+
+.post-item {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--post-border);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item::before {
+  content: "• ";
+  color: var(--brand);
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.tool-item {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--post-border);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.tool-item:last-child {
+  border-bottom: none;
+}
+
+.tool-item .tool-title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.tool-item small {
+  display: block;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+/* ==========================
+   🔹 Paragraphs
+   ========================== */
+.justify-p {
+  text-align: justify;
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ==========================
+   🔹 Pagination
+   ========================== */
+.pagination {
+  margin-top: 12px;
+  text-align: center;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.pagination button {
+  background: var(--bg);
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: var(--brand);
+  color: var(--bg);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==========================
+   🔹 Social / Follow Buttons
+   ========================== */
+.follow-us .social-btns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.follow-us .btn {
+  width: 150px;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+  background: var(--bg);
+  border-top: var(--border-width) solid var(--brand);
+  border-left: var(--border-width) solid var(--brand);
+  border-bottom: 3px solid #000;
+  border-right: 3px solid #000;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.follow-us .btn.whatsapp:hover {
+  background: #25D366;
+  color: #fff;
+}
+
+.follow-us .btn.facebook:hover {
+  background: #1877F2;
+  color: #fff;
+}
+
+/* ==========================
+   🔹 Tables
+   ========================== */
+.uni-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.uni-table td,
+.uni-table th {
+  border: 1px solid #1a1a1a;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.uni-table th {
+  background: #f2f2f2;
+  font-weight: 600;
+}
+
+.table-nowrap {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  white-space: nowrap;
+  overflow-x: auto;
+  display: table;
+  -webkit-overflow-scrolling: touch;
+  font-size: 14px;
+}
+
+table.table-nowrap th,
+table.table-nowrap td {
+  border: var(--border-width) solid var(--brand);
+  padding: 8px 12px;
+  text-align: left;
+  min-width: 160px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+table.table-nowrap th {
+  background-color: #dcdcdc;
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+
+/* ==========================
+   🔹 Footer
+   ========================== */
+footer {
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+/* ==========================
+   🔹 Responsive Adjustments
+   ========================== */
+@media (max-width: 768px) {
+  .table-nowrap {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 600px) {
+  .post-item {
+    white-space: normal;
+  }
+  .tool-item {
+    white-space: normal;
+  }
+  .pagination {
+    gap: 4px;
+    padding: 8px 0;
+  }
+  .follow-us .social-btns {
+    gap: 12px;
+  }
+}
