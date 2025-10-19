@@ -31,8 +31,8 @@ window.POSTS = [
   { title: "SSC Delhi Police 2025 Recruitment – 7,565 Executive Constable Vacancies", href: "ssc-recruitment/" },
   { title: "DME Assam Result 2025 - Check DME Grade III Non Tech Results", href: "dme-assam-result-2025.html" },
   { title: "DHS Assam Recruitment 2025 – Submit Online Application for 191 Grade-III Posts", href: "dhs-recruitment/" },
-  { title: "RRB NTPC Result 2025 – Check Your NTPC (Graduate Level) Exam Scorecard", href: "rrb-result/" }
-  // Add new articles here: { title: "Your New Article Title", href: "your-link/" }
+  { title: "RRB NTPC Result 2025 – Check Your NTPC (Graduate Level) Exam Scorecard", href: "rrb-result/" },
+  { title: "SSC CHSL Tier 1 2025 Exam Date Announced – Check Exam Shifts & Timings", href: "ssc-chsl/" }
 ];
 
 // Configuration
@@ -84,9 +84,10 @@ window.renderPosts = function(page = 1, searchTerm = "") {
   }
 
   // Filter posts by search term
-  const filteredPosts = window.POSTS.filter(p =>
-    p && p.title && p.href && p.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredPosts = window.POSTS
+  .filter(p => p && p.title && p.href && p.title.toLowerCase().includes(searchTerm.toLowerCase()))
+  .slice()   // create a shallow copy
+  .reverse(); // reverse order so last added comes first
 
   const totalPages = Math.max(1, Math.ceil(filteredPosts.length / postsPerPage));
   const start = (page - 1) * postsPerPage;
