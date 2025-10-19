@@ -9,7 +9,19 @@
 <meta name="keywords" content="Assam government jobs, Assam latest jobs, Assam recruitment 2025, Assam exam results, Assam admissions, Assam scholarships, government job notifications Assam, jobs in Northeast India, Skill2Job, latest Assam vacancies">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://skill2job.site/">
+
+<!-- 🔹 Preconnect to third-party servers to reduce latency -->
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+
+<!-- 🔹 Load AdSense async (still required for ads) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876390706944654" crossorigin="anonymous"></script>
+
+<!-- 🔹 Load main CSS non-blocking -->
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+  
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -137,15 +149,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </p>
     </div>
 
-    <!-- Google AdSense Ad (Responsive) -->
-    <div style="width:98%; margin:auto; min-height:380px; text-align:center;">
-      <ins class="adsbygoogle"
-           style="display:block; width:95%; min-height:250px;"
-           data-ad-client="ca-pub-1876390706944654"
-           data-ad-slot="4054819400"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-    </div>
+    <!-- Reserved ad space to prevent layout shift -->
+<div class="ad-wrap" style="width:95%;max-width:1100px;margin:auto;text-align:center;">
+  <div class="ad-box" style="width:100%;height:280px;max-height:320px;display:block;overflow:hidden;">
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;height:100%;"
+         data-ad-client="ca-pub-1876390706944654"
+         data-ad-slot="4054819400"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+</div>
 
     <!-- Our Online Tools (tool items) -->
     <div class="container">
@@ -186,7 +200,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Place this just before closing </body> -->
 <script src="post.js" defer></script>
 
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <script>
+window.addEventListener('DOMContentLoaded', function () {
+  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+});
+</script>
   
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5X1VJQS79"></script>
