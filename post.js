@@ -3,6 +3,7 @@ document.getElementById("yr").textContent = new Date().getFullYear();
 
 // List of posts/articles (merged all titles)
 window.POSTS = [
+  { title: SSC CHSL Tier 1 2025 Exam Date Announced – Check Exam Shifts & Timings", href: "ssc-chsl/" },
   { title: "Assam Direct Recruitment Exam Syllabus & Pattern", href: "adre-syllabus/" },
   { title: "SSC CGL AAO & ASO Guide 2025 - Exam, Syllabus, Career", href: "ssc-cgl-guide/" },
   { title: "BSF Constable (GD) Recruitment 2025 – Apply for 391 Vacancies", href: "bsf-gd-recr/" },
