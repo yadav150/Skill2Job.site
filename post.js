@@ -35,7 +35,8 @@ window.POSTS = [
   { title: "SSC CHSL Tier 1 2025 Exam Date Announced – Check Exam Shifts & Timings", href: "ssc-chsl/" },
   { title: "RRB NTPC Recruitment 2025 – Online Application for 8860 Vacancies", href: "rrb-ntpc-2025/" },
   { title: "UCO Bank Recruitment 2025 – Apply Online for 532 Apprentice Vacancies", href: "uco-bank-recruitment-2025/" },
-  { title: "DEE Assam 2025 LP & UP 2nd Provisional Merit List Out – Download Here", href: "dee-assam-merit-list-2025/" }
+  { title: "DEE Assam 2025 LP & UP 2nd Provisional Merit List Out – Download Here", href: "dee-assam-merit-list-2025/" },
+  { title: "ONGC Apprentice Recruitment 2025: Apply Online for 2743 Vacancies", href: "ongc-apprentice-recruitment-2025/" }
 ];
 
 // Configuration
